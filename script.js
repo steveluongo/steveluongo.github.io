@@ -308,7 +308,14 @@ function triggerAButton() {
             aButton.style.boxShadow = 'inset 0 2px 4px rgba(0,0,0,0.3), 0 2px 4px rgba(255,255,255,0.1)';
         }, 150);
     }
-    console.log('A button pressed');
+
+    // Navigate to contact section
+    const contactSectionIndex = siteContent.sections.findIndex(section => section.id === 'contact');
+    if (contactSectionIndex !== -1) {
+        navigateToSection(contactSectionIndex);
+    }
+
+    console.log('A button pressed - navigating to contact');
 }
 
 function triggerBButton() {
