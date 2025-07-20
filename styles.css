@@ -17,6 +17,16 @@ body {
     margin: 0;
 }
 
+/* Mobile full height optimization */
+@media (max-width: 768px) {
+    body {
+        padding: 0;
+        min-height: 100vh;
+        height: 100vh;
+        overflow: hidden;
+    }
+}
+
 /* Desktop optimizations */
 @media (min-width: 1200px) {
     .gameboy-container {
@@ -87,6 +97,17 @@ body {
         0 8px 16px rgba(0,0,0,0.3);
 }
 
+/* Mobile full height optimization */
+@media (max-width: 768px) {
+    .gameboy-container {
+        width: 100vw;
+        height: 100vh;
+        border-radius: 0;
+        padding: 10px;
+        box-shadow: none;
+    }
+}
+
 /* Screen */
 .screen {
     width: 100%;
@@ -97,6 +118,15 @@ body {
     padding: 15px;
     position: relative;
     overflow: hidden;
+}
+
+/* Mobile full height optimization */
+@media (max-width: 768px) {
+    .screen {
+        height: calc(100vh - 120px); /* Account for controls and padding */
+        border-radius: 4px;
+        padding: 10px;
+    }
 }
 
 .screen-content {
@@ -567,16 +597,6 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
-    .gameboy-container {
-        width: 90vw;
-        height: 90vh;
-        padding: 15px;
-    }
-
-    .screen {
-        height: 75vh;
-    }
-
     .controls {
         margin-top: 10px;
         padding: 0 10px;
@@ -584,17 +604,6 @@ body {
 }
 
 @media (max-width: 480px) {
-    .gameboy-container {
-        width: 95vw;
-        height: 90vh;
-        padding: 10px;
-    }
-
-    .screen {
-        height: 75vh;
-        padding: 10px;
-    }
-
     .controls {
         margin-top: 10px;
         padding: 0 5px;
