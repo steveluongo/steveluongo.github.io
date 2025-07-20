@@ -1,0 +1,90 @@
+{
+  "company": {
+    "name": "FOXSIDE",
+    "subtitle": "WEB DEVELOPMENT LLC",
+    "tagline": "We are a passionate web development studio specializing in creating unique, retro-inspired digital experiences."
+  },
+  "sections": [
+    {
+      "id": "about",
+      "title": "ABOUT FOXSIDE",
+      "menuText": "ABOUT US",
+      "content": [
+        {
+          "type": "paragraph",
+          "text": "Founded with a love for both classic gaming and cutting-edge web development, we bring the charm of the past into the future of the web."
+        }
+      ]
+    },
+    {
+      "id": "services",
+      "title": "OUR SERVICES",
+      "menuText": "SERVICES",
+      "content": [
+        {
+          "type": "grid",
+          "items": [
+            {
+              "title": "WEB DESIGN",
+              "description": "Custom websites with unique themes "
+            },
+            {
+              "title": "FRONTEND DEVELOPMENT",
+              "description": "Responsive, interactive web applications"
+            },
+            {
+              "title": "BACKEND DEVELOPMENT",
+              "description": "Robust server-side solutions and APIs"
+            },
+            {
+              "title": "E-COMMERCE",
+              "description": "Online stores with modern functionality"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "portfolio",
+      "title": "PORTFOLIO",
+      "menuText": "PORTFOLIO",
+      "content": [
+        {
+          "type": "grid",
+          "items": [
+            {
+              "title": "COMING SOON",
+              "description": "Coming soon"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "contact",
+      "title": "CONTACT US",
+      "menuText": "CONTACT",
+      "content": [
+        {
+          "type": "contact-info",
+          "items": [
+            {
+              "label": "EMAIL",
+              "value": "foxsidewebdevelopment@gmail.com"
+            }
+          ]
+        },
+        {
+          "type": "contact-form",
+          "text": [
+            "Ready to start your project?",
+            "Let's create something amazing together!"
+          ]
+        }
+      ]
+    }
+  ],
+  "footer": {
+    "text": "© 2025 FOXSIDE WEB DEVELOPMENT LLC"
+  }
+}

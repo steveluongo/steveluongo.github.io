@@ -1,0 +1,634 @@
+/* DMG Game Boy Styling for Foxside Web Development LLC */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Press Start 2P', monospace;
+    background: #2c3e50;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+    margin: 0;
+}
+
+/* Desktop optimizations */
+@media (min-width: 1200px) {
+    .gameboy-container {
+        width: 700px;
+        height: 90vh;
+    }
+
+    .screen {
+        height: 75vh;
+        padding: 20px;
+    }
+
+    .screen-content {
+        font-size: 14px;
+    }
+
+    .title {
+        font-size: 28px;
+    }
+
+    .subtitle {
+        font-size: 14px;
+    }
+
+    .section h3 {
+        font-size: 18px;
+    }
+
+    .section p {
+        font-size: 12px;
+    }
+
+    .service-item h4,
+    .portfolio-item h4 {
+        font-size: 14px;
+    }
+
+    .service-item p,
+    .portfolio-item p {
+        font-size: 10px;
+    }
+
+    .contact-info p,
+    .contact-form p {
+        font-size: 12px;
+    }
+
+    .footer {
+        font-size: 10px;
+    }
+
+    .controls {
+        margin-top: 30px;
+        padding: 0 30px;
+    }
+}
+
+.gameboy-container {
+    position: relative;
+    width: min(600px, 90vw);
+    height: 90vh;
+    background: #8b8b8b;
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow:
+        0 0 0 4px #5a5a5a,
+        0 0 0 8px #8b8b8b,
+        0 8px 16px rgba(0,0,0,0.3);
+}
+
+/* Screen */
+.screen {
+    width: 100%;
+    height: 75vh;
+    background: #9bbc0f;
+    border: 4px solid #0f380f;
+    border-radius: 8px;
+    padding: 15px;
+    position: relative;
+    overflow: hidden;
+}
+
+.screen-content {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    color: #0f380f;
+    font-size: clamp(10px, 2vw, 14px);
+    line-height: 1.5;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #0f380f;
+    padding-bottom: 10px;
+}
+
+.title {
+    font-size: clamp(18px, 3.5vw, 28px);
+    margin-bottom: 5px;
+    text-shadow: 2px 2px 0px #0f380f;
+}
+
+.subtitle {
+    font-size: clamp(10px, 2vw, 14px);
+    opacity: 0.8;
+}
+
+/* Menu */
+.menu {
+    margin-bottom: 15px;
+}
+
+.menu-item {
+    display: flex;
+    align-items: center;
+    padding: 5px 0 5px 10px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.menu-item:hover {
+    background: rgba(15, 56, 15, 0.2);
+}
+
+.menu-item.active {
+    background: #0f380f;
+    color: #9bbc0f;
+}
+
+.menu-icon {
+    margin-right: 8px;
+    font-size: clamp(6px, 1vw, 10px);
+}
+
+/* Content Sections */
+.content {
+    flex: 1;
+    overflow-y: auto;
+}
+
+.section {
+    display: none;
+    animation: fadeIn 0.3s ease-in;
+}
+
+.section.active {
+    display: block;
+}
+
+.section h3 {
+    font-size: clamp(12px, 2.5vw, 18px);
+    margin-bottom: 10px;
+    border-bottom: 1px solid #0f380f;
+    padding-bottom: 5px;
+}
+
+.section p {
+    margin-bottom: 8px;
+    font-size: clamp(8px, 1.8vw, 12px);
+}
+
+/* Service Grid */
+.service-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(8px, 1.5vw, 12px);
+}
+
+.service-item {
+    border: 1px solid #0f380f;
+    padding: clamp(8px, 1.5vw, 12px);
+    background: rgba(15, 56, 15, 0.1);
+}
+
+.service-item h4 {
+    font-size: clamp(9px, 2vw, 14px);
+    margin-bottom: 5px;
+    color: #0f380f;
+}
+
+.service-item p {
+    font-size: clamp(7px, 1.8vw, 11px);
+    line-height: 1.4;
+}
+
+/* Portfolio Grid */
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: clamp(8px, 1.5vw, 12px);
+}
+
+.portfolio-item {
+    border: 1px solid #0f380f;
+    padding: clamp(8px, 1.5vw, 12px);
+    background: rgba(15, 56, 15, 0.1);
+}
+
+.portfolio-item h4 {
+    font-size: clamp(9px, 2vw, 14px);
+    margin-bottom: 5px;
+    color: #0f380f;
+}
+
+.portfolio-item p {
+    font-size: clamp(7px, 1.8vw, 11px);
+    line-height: 1.4;
+}
+
+/* Contact Info */
+.contact-info {
+    margin-bottom: 15px;
+}
+
+.contact-info p {
+    font-size: clamp(8px, 1.8vw, 12px);
+    margin-bottom: 5px;
+}
+
+.contact-link {
+    color: #0f380f;
+    text-decoration: underline;
+    transition: all 0.2s ease;
+    background: rgba(155, 188, 15, 0.1);
+    padding: 2px 4px;
+    border-radius: 2px;
+}
+
+.contact-link:hover {
+    color: #ffffff;
+    background: #0f380f;
+    text-decoration: none;
+    box-shadow: 0 0 4px rgba(15, 56, 15, 0.5);
+}
+
+.contact-form {
+    border: 1px solid #0f380f;
+    padding: 10px;
+    background: rgba(15, 56, 15, 0.1);
+    text-align: center;
+}
+
+.contact-form p {
+    font-size: clamp(8px, 1.8vw, 12px);
+    margin-bottom: 5px;
+}
+
+/* Footer */
+.footer {
+    text-align: center;
+    padding-top: 10px;
+    border-top: 1px solid #0f380f;
+    font-size: clamp(7px, 1.5vw, 10px);
+    opacity: 0.7;
+}
+
+/* Controls */
+.controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+    padding: 0 clamp(20px, 3vw, 40px);
+}
+
+/* D-Pad */
+.d-pad {
+    position: relative;
+    width: clamp(50px, 8vw, 80px);
+    height: clamp(50px, 8vw, 80px);
+}
+
+.d-pad-center {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: clamp(18px, 3vw, 30px);
+    height: clamp(18px, 3vw, 30px);
+    background: #5a5a5a;
+    border-radius: 50%;
+}
+
+.d-pad-up, .d-pad-down, .d-pad-left, .d-pad-right {
+    position: absolute;
+    background: #5a5a5a;
+    border-radius: clamp(3px, 0.6vw, 6px);
+    cursor: pointer;
+    transition: all 0.1s ease;
+    box-shadow:
+        inset 0 2px 4px rgba(0,0,0,0.3),
+        0 2px 4px rgba(255,255,255,0.1);
+}
+
+.d-pad-up:hover, .d-pad-down:hover, .d-pad-left:hover, .d-pad-right:hover {
+    background: #6a6a6a;
+    transform: translateX(-50%) scale(0.95);
+}
+
+.d-pad-left:hover, .d-pad-right:hover {
+    transform: translateY(-50%) scale(0.95);
+}
+
+.d-pad-up:active, .d-pad-down:active, .d-pad-left:active, .d-pad-right:active {
+    background: #4a4a4a;
+    transform: translateX(-50%) scale(0.9);
+    box-shadow:
+        inset 0 4px 8px rgba(0,0,0,0.4),
+        0 1px 2px rgba(255,255,255,0.05);
+}
+
+.d-pad-left:active, .d-pad-right:active {
+    transform: translateY(-50%) scale(0.9);
+}
+
+.d-pad-up, .d-pad-down {
+    width: clamp(18px, 3vw, 30px);
+    height: clamp(8px, 1.5vw, 15px);
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.d-pad-left, .d-pad-right {
+    width: clamp(8px, 1.5vw, 15px);
+    height: clamp(18px, 3vw, 30px);
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.d-pad-up {
+    top: 0;
+}
+
+.d-pad-down {
+    bottom: 0;
+}
+
+.d-pad-left {
+    left: 0;
+}
+
+.d-pad-right {
+    right: 0;
+}
+
+/* Buttons */
+.buttons {
+    display: flex;
+    gap: clamp(10px, 2vw, 20px);
+}
+
+.button {
+    width: clamp(25px, 4vw, 40px);
+    height: clamp(25px, 4vw, 40px);
+    background: #5a5a5a;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: clamp(6px, 1.2vw, 12px);
+    font-weight: bold;
+    color: #8b8b8b;
+    cursor: pointer;
+    transition: all 0.1s ease;
+    box-shadow:
+        inset 0 2px 4px rgba(0,0,0,0.3),
+        0 2px 4px rgba(255,255,255,0.1);
+}
+
+.button:hover {
+    transform: scale(0.95);
+    box-shadow:
+        inset 0 2px 4px rgba(0,0,0,0.3),
+        0 3px 6px rgba(255,255,255,0.15);
+}
+
+.button:active {
+    transform: scale(0.9);
+    box-shadow:
+        inset 0 4px 8px rgba(0,0,0,0.4),
+        0 1px 2px rgba(255,255,255,0.05);
+}
+
+.a-button {
+    background: #ff6b6b;
+    color: #fff;
+}
+
+.b-button {
+    background: #4ecdc4;
+    color: #fff;
+}
+
+/* Speaker */
+.speaker {
+    position: absolute;
+    bottom: clamp(10px, 1.5vh, 20px);
+    right: clamp(10px, 1.5vw, 20px);
+    width: clamp(20px, 3vw, 35px);
+    height: clamp(10px, 2vh, 18px);
+    background: #5a5a5a;
+    border-radius: clamp(6px, 0.8vw, 10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.speaker-holes {
+    display: flex;
+    gap: clamp(1px, 0.3vw, 3px);
+}
+
+.hole {
+    width: clamp(2px, 0.4vw, 4px);
+    height: clamp(2px, 0.4vw, 4px);
+    background: #2c2c2c;
+    border-radius: 50%;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Startup Animation */
+.startup-screen {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #9bbc0f;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 10;
+}
+
+.startup-screen::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        /* Horizontal scan lines */
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 2px,
+            rgba(15, 56, 15, 0.03) 2px,
+            rgba(15, 56, 15, 0.03) 4px
+        ),
+        /* Vertical dot matrix lines */
+        repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 2px,
+            rgba(15, 56, 15, 0.02) 2px,
+            rgba(15, 56, 15, 0.02) 4px
+        );
+    pointer-events: none;
+    z-index: 1;
+}
+
+.startup-logo {
+    text-align: center;
+    color: #0f380f;
+    margin-bottom: 40px;
+}
+
+.logo-text {
+    font-size: clamp(24px, 4vw, 36px);
+    font-weight: bold;
+    text-shadow: 2px 2px 0px #0f380f;
+    margin-bottom: 8px;
+}
+
+.logo-subtitle {
+    font-size: clamp(10px, 1.5vw, 14px);
+    opacity: 0.8;
+}
+
+.startup-loading {
+    text-align: center;
+}
+
+.loading-dots {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    opacity: 0;
+    transition: opacity 0.5s ease;
+}
+
+.loading-dots span {
+    width: 8px;
+    height: 8px;
+    background: #0f380f;
+    border-radius: 50%;
+    animation: loadingPulse 1.5s infinite ease-in-out;
+}
+
+.loading-dots span:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.loading-dots span:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes loadingPulse {
+    0%, 80%, 100% {
+        transform: scale(0.8);
+        opacity: 0.5;
+    }
+    40% {
+        transform: scale(1.2);
+        opacity: 1;
+    }
+}
+
+/* Scrollbar Styling */
+.screen-content::-webkit-scrollbar {
+    width: 4px;
+}
+
+.screen-content::-webkit-scrollbar-track {
+    background: #9bbc0f;
+}
+
+.screen-content::-webkit-scrollbar-thumb {
+    background: #0f380f;
+    border-radius: 2px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .gameboy-container {
+        width: 90vw;
+        height: 90vh;
+        padding: 15px;
+    }
+
+    .screen {
+        height: 75vh;
+    }
+
+    .controls {
+        margin-top: 10px;
+        padding: 0 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .gameboy-container {
+        width: 95vw;
+        height: 90vh;
+        padding: 10px;
+    }
+
+    .screen {
+        height: 75vh;
+        padding: 10px;
+    }
+
+    .controls {
+        margin-top: 10px;
+        padding: 0 5px;
+    }
+}
+
+/* Game Boy Dot Matrix Effect */
+.screen::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background:
+        /* Horizontal scan lines */
+        repeating-linear-gradient(
+            0deg,
+            transparent,
+            transparent 2px,
+            rgba(15, 56, 15, 0.03) 2px,
+            rgba(15, 56, 15, 0.03) 4px
+        ),
+        /* Vertical dot matrix lines */
+        repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 2px,
+            rgba(15, 56, 15, 0.02) 2px,
+            rgba(15, 56, 15, 0.02) 4px
+        );
+    pointer-events: none;
+}
+
+
+
+
