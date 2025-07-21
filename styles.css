@@ -103,8 +103,7 @@ body {
 @media (max-width: 768px) {
     .gameboy-container {
         width: 100vw;
-        min-height: 95vh;
-        height: 95vh;
+        height: calc(100vh - 20px); /* Adjusted height */
         border-radius: 0;
         padding: 10px;
         box-shadow: none;
