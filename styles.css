@@ -23,6 +23,9 @@ body {
         padding: 0;
         min-height: 100vh;
         overflow-y: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 }
 
@@ -100,8 +103,8 @@ body {
 @media (max-width: 768px) {
     .gameboy-container {
         width: 100vw;
-        min-height: 100vh;
-        height: auto;
+        min-height: 95vh;
+        height: 95vh;
         border-radius: 0;
         padding: 10px;
         box-shadow: none;
@@ -624,7 +627,7 @@ body {
 
 @media (max-width: 480px) {
     .screen {
-        min-height: 350px;
+        min-height: 500px;
         height: auto;
         padding: 8px;
     }
