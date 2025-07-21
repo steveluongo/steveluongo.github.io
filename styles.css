@@ -316,7 +316,7 @@ body {
     justify-content: space-between;
     align-items: center;
     margin-top: 10px;
-    padding: 0 clamp(20px, 3vw, 40px);
+    padding: 0 clamp(30px, 5vw, 50px);
 }
 
 /* D-Pad */
@@ -439,6 +439,45 @@ body {
     width: 100%;
     height: 100%;
     text-align: center;
+}
+
+/* Mobile button optimization */
+@media (max-width: 768px) {
+    .button {
+        width: clamp(45px, 10vw, 65px);
+        height: clamp(45px, 10vw, 65px);
+        font-size: clamp(10px, 2.5vw, 16px);
+    }
+
+    .mail-icon {
+        font-size: clamp(14px, 3vw, 24px) !important;
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 28;
+    }
+
+    .d-pad {
+        width: clamp(90px, 15vw, 120px);
+        height: clamp(90px, 15vw, 120px);
+    }
+
+    .d-pad-center {
+        width: clamp(32px, 5vw, 45px);
+        height: clamp(32px, 5vw, 45px);
+    }
+
+    .d-pad-up, .d-pad-down {
+        width: clamp(32px, 5vw, 45px);
+        height: clamp(12px, 2.5vw, 25px);
+    }
+
+    .d-pad-left, .d-pad-right {
+        width: clamp(12px, 2.5vw, 25px);
+        height: clamp(32px, 5vw, 45px);
+    }
+
+    .controls {
+        margin-top: 25px;
+        padding: 0 clamp(40px, 8vw, 60px);
+    }
 }
 
 .button:hover {
@@ -633,8 +672,39 @@ body {
     }
 
     .controls {
-        margin-top: 10px;
-        padding: 0 5px;
+        margin-top: 20px;
+        padding: 0 clamp(25px, 6vw, 40px);
+    }
+
+    .button {
+        width: clamp(40px, 9vw, 55px);
+        height: clamp(40px, 9vw, 55px);
+        font-size: clamp(9px, 2.2vw, 14px);
+    }
+
+    .mail-icon {
+        font-size: clamp(12px, 2.8vw, 22px) !important;
+        font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+
+    .d-pad {
+        width: clamp(75px, 12vw, 100px);
+        height: clamp(75px, 12vw, 100px);
+    }
+
+    .d-pad-center {
+        width: clamp(28px, 4.5vw, 38px);
+        height: clamp(28px, 4.5vw, 38px);
+    }
+
+    .d-pad-up, .d-pad-down {
+        width: clamp(28px, 4.5vw, 38px);
+        height: clamp(10px, 2.2vw, 22px);
+    }
+
+    .d-pad-left, .d-pad-right {
+        width: clamp(10px, 2.2vw, 22px);
+        height: clamp(28px, 4.5vw, 38px);
     }
 }
 

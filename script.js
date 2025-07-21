@@ -41,7 +41,7 @@ function getDefaultContent() {
             }
         ],
         "footer": {
-            "text": "© 2024 FOXSIDE WEB DEVELOPMENT LLC"
+            "text": "© 2025 FOXSIDE WEB DEVELOPMENT LLC"
         }
     };
 }
@@ -414,7 +414,7 @@ function addStartupAnimation() {
             screenContent.style.display = 'flex';
             screenContent.style.animation = 'fadeIn 0.5s ease';
         }, 500);
-    }, 4000);
+    }, 3000);
 }
 
 function addScreenFlicker() {
