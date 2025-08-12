@@ -262,6 +262,26 @@ body {
     line-height: 1.4;
 }
 
+.portfolio-link {
+    display: inline-block;
+    margin-top: 8px;
+    color: #0f380f;
+    text-decoration: underline;
+    font-size: clamp(7px, 1.5vw, 10px);
+    transition: all 0.2s ease;
+    background: rgba(155, 188, 15, 0.1);
+    padding: 3px 6px;
+    border-radius: 2px;
+    border: 1px solid #0f380f;
+}
+
+.portfolio-link:hover {
+    color: #ffffff;
+    background: #0f380f;
+    text-decoration: none;
+    box-shadow: 0 0 4px rgba(15, 56, 15, 0.5);
+}
+
 /* Contact Info */
 .contact-info {
     margin-bottom: 15px;

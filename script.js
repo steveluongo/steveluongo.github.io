@@ -135,6 +135,18 @@ function generateContentElement(contentItem) {
 
                 gridItem.appendChild(title);
                 gridItem.appendChild(description);
+
+                // Add link if it exists (for portfolio items)
+                if (item.link && !contentItem.items[0].title.includes('SERVICE')) {
+                    const link = document.createElement('a');
+                    link.href = item.link;
+                    link.target = '_blank';
+                    link.rel = 'noopener noreferrer';
+                    link.className = 'portfolio-link';
+                    link.textContent = 'Visit Site';
+                    gridItem.appendChild(link);
+                }
+
                 grid.appendChild(gridItem);
             });
 

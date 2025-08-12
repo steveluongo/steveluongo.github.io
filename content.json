@@ -53,8 +53,9 @@
           "type": "grid",
           "items": [
             {
-              "title": "COMING SOON",
-              "description": "Coming soon"
+              "title": "THE BIRDIE BRIEFING",
+              "description": "Your premier source for LPGA women's golf news, tournament coverage, and exclusive content. Celebrating the stories, achievements, and voices of women in golf.",
+              "link": "https://www.birdiebriefing.com/"
             }
           ]
         }
